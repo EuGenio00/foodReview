@@ -1,0 +1,38 @@
+{
+  "name": "foodreview",
+  "version": "1.0.0",
+  "description": "Sistema de Avaliação de Restaurantes",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=producao node server",
+    "dev": "cross-env NODE_ENV=desenvolvimento nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EuGenio00/foodReview.git"
+  },
+  "keywords": [
+    "review",
+    "restaurant",
+    "food",
+    "app"
+  ],
+  "author": "EuGenio Mateus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EuGenio00/foodReview/issues"
+  },
+  "homepage": "https://github.com/EuGenio00/foodReview#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.19"
+  }
+}
