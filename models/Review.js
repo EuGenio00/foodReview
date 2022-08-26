@@ -1,35 +1,40 @@
-import Sequelize from 'sequelize'; // importar a biblioteca Sequelize
-import connection from '../config/db.js'; // importar a "connection" localizada na pasta config
+import Sequelize from 'sequelize';
+import connection from '../config/db.js';
 
-// criar o modelo
-const Review = connection.define( // função define
-    'review', // nome base do modelo 
-    // define os modelos do restaurante no seguinte objeto
+const Review = connection.define(
+    'review',
     {
         id: {
-            type: Sequelize.INTEGER, // reconhece um numero inteiro pelo Sequelize
-            autoIncrement: true, // o numero id é dado automaticamente
-            allowNull: false, // Não permite que seja nulo
-            primaryKey: true // reconhece chave primaria
+            type: Sequelize.INTEGER,
+            autoIncrement: true,
+            allowNull: false,
+            primaryKey: true    
         },
         idUser: {
-            type: Sequelize.INTEGER, // permite um valor string
-            allowNull: false
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'users',
+                key: 'id'
+            }
         },
         idRestaurant: {
-            type: Sequelize.INTEGER, // permite um valor string
-            allowNull: false
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'restaurants',
+                key: 'id'
+            }
         },
         comment: {
-            type: Sequelize.STRING, // permite um valor string
+            type: Sequelize.STRING,
             allowNull: false
         },
         stars: {
-            type: Sequelize.INTEGER, // permite um valor string
+            type: Sequelize.INTEGER,
             allowNull: false
         }
     }
-
 );
 
 export default Review;

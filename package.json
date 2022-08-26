@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EuGenio00/foodReview.git"
+    "url": "git+https://github.com/eduardorahal/foodreview.git"
   },
   "keywords": [
     "review",
@@ -18,15 +18,18 @@
     "food",
     "app"
   ],
-  "author": "EuGenio Mateus",
+  "author": "Eduardo Rahal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EuGenio00/foodReview/issues"
+    "url": "https://github.com/eduardorahal/foodreview/issues"
   },
-  "homepage": "https://github.com/EuGenio00/foodReview#readme",
+  "homepage": "https://github.com/eduardorahal/foodreview#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.3"
